@@ -1,0 +1,9 @@
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\bin\Debug\PatientTestResult.Parser.dll
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\bin\Debug\PatientTestResult.Parser.pdb
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\obj\Debug\PatientTestResult.Parser.dll
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\obj\Debug\PatientTestResult.Parser.pdb
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\obj\Debug\PatientTestResult.Parser.csprojResolveAssemblyReference.cache
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\bin\Debug\PatientResults.DAL.dll
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\bin\Debug\PatientTestResult.Model.dll
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\bin\Debug\PatientResults.DAL.pdb
+C:\Users\John\Desktop\Laba.Net\Project2_ADO\LabTestResults\PatientTestResult.Parser\bin\Debug\PatientTestResult.Model.pdb

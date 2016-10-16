@@ -1,0 +1,32 @@
+﻿<Window x:Class="LabTestResults.InsertProteinMetabolismWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Name="proteinMetabolism" Title="InsertProteinMetabolismWindow" Height="207.422" Width="721.64" Background="#FF3A0018">
+    <Grid>
+        <GroupBox Header="Protein Metabolism Test Information" Margin="6,6,0,0" VerticalAlignment="Top" Height="161" HorizontalAlignment="Left" Width="696" FontStyle="Italic" Foreground="White">
+            <WrapPanel HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="676" Margin="2,6,0,-7" Background="#FFFFB900">
+                <Label Content="Result Date" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <DatePicker x:Name="Calendar" Width="120" Margin="0,0,5,10"/>
+                <Label Content="General Protein" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtGeneralProtein" HorizontalAlignment="Left" Height="23" Margin="0,0,5,10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Albumin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtAlbumin" HorizontalAlignment="Left" Margin="0,0,5,10" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Globulin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtGlobulin" HorizontalAlignment="Left" Margin="0,0,5,10" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Fibrinogen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtFibrinogen" HorizontalAlignment="Left" Height="23" Margin="0,0,5,10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Creatinin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtCreatinin" HorizontalAlignment="Left" Height="23" Margin="0,0,5,10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Creatine kinase" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtCreatineKinase" HorizontalAlignment="Left" Height="23" Margin="0,0,5,10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Urea" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtUrea" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Margin="0,0,5,10" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Urea acid" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontStyle="Italic"/>
+                <TextBox x:Name="txtUreaAcid" HorizontalAlignment="Left" Margin="0,0,5,10" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button Content="Add Test Result" Width="429" FontStyle="Italic" Margin="100,0,0,0" Click="addPatientResult" Height="26"/>
+            </WrapPanel>
+        </GroupBox>
+
+
+    </Grid>
+</Window>

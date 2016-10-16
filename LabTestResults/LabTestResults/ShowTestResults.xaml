@@ -1,0 +1,9 @@
+﻿<Window x:Class="LabTestResults.ShowTestResults"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ShowTestResults" Height="228" Width="1086" Background="#FF3A0018">
+    <Grid Margin="0,0,0,16">
+        <DataGrid Name ="dataGridTestResults" HorizontalAlignment="Stretch" Margin="10,18,10,0" Height="161" VerticalAlignment="Top" Background="#FFFFB900" AlternatingRowBackground="#FFFBC9C9" RowBackground="#FFFFFA98"/>
+
+    </Grid>
+</Window>

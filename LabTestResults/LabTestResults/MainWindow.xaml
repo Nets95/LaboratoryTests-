@@ -1,0 +1,103 @@
+﻿<Window x:Name="mainWindow" x:Class="LabTestResults.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabTestResults"
+        mc:Ignorable="d" Height="654" Width="1086" BorderBrush="Black">
+    
+    <Grid x:Name="gridMain" Background="#FF3A0018" OpacityMask="#FFE2CBE6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="364*"/>
+            <RowDefinition Height="232*"/>
+        </Grid.RowDefinitions>
+        <DataGrid   Name ="dataGrid" HorizontalAlignment = "Stretch" Margin="30,10,30,11" VerticalScrollBarVisibility= "Auto"  HorizontalScrollBarVisibility= "Auto" Grid.Row="1" Background="#FFFFB900" BorderBrush="White" OpacityMask="White" HorizontalGridLinesBrush="#FF9600FD" VerticalGridLinesBrush="#FF9600FD" RowBackground="#FFFFFA98" SelectionChanged="selectionChanged" AlternatingRowBackground="#FFFBC9C9" BorderThickness="2">
+            <DataGrid.ContextMenu >
+            <ContextMenu>
+                <MenuItem Header="Show Patient Results" Click="showPatientTestResultClick" />
+                    <MenuItem Header="Add Patient Result" Click="addPatientTestResult"/>
+                        <MenuItem Header="Dele Patient" Click="deletePatient" />
+                <Separator />
+                <MenuItem Header="Edit Patient Information" />
+            </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+        <Menu Name = "menu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="135" FontStyle="Italic" Background="#FF3A0018" RenderTransformOrigin="0.5,0.5" Margin="2,1,0,0">
+                <Menu.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.048"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Menu.RenderTransform>
+                <MenuItem Header="FILE" Height="21" FontStyle="Normal" Foreground="White" Background="#FF3A0018" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontSize="12" Width="45" BorderBrush="#FF3A0018" BorderThickness="0">
+                <MenuItem Header="Add Patient" FontStyle="Normal" Foreground="Black" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontSize="10" Click="enablePatientRegistrationWindow">
+                    </MenuItem>
+                <MenuItem Header="Show Patients" FontStyle="Normal" Foreground="Black" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontSize="10" Click="showAllPatientsClick">
+                </MenuItem>
+
+                <Separator/>
+                    <MenuItem Header="Exit" Click="exitClick" FontSize="10" Foreground="Black"/>
+                </MenuItem>
+            <MenuItem Header="EDIT"  FontStyle="Normal" Height="21" Foreground="White" Width="45" BorderBrush="#FF3A0018" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontSize="12" Background="#FF3A0018" RenderTransformOrigin="0.5,0.5">
+                <MenuItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.205"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </MenuItem.RenderTransform>
+
+            </MenuItem>
+            <MenuItem Header="HELP"  FontStyle="Normal" Height="21" Foreground="White" ItemsSource="{Binding GroupByOptions}" Width="45" BorderBrush="#FF3A0018" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" FontSize="12" Background="#FF3A0018">
+                <MenuItem Header="Information" TextOptions.TextHintingMode="Animated" TextOptions.TextFormattingMode="Display" Foreground="Black"/>
+            </MenuItem>
+        </Menu>
+        
+        <GroupBox Header="MedicalTestResults" HorizontalAlignment="Stretch" Margin="32,2,30,16" Grid.Row="2" VerticalAlignment="Stretch" FontStyle="Italic" Foreground="White" BorderBrush="White" BorderThickness="1">
+            <Button Content ="Search By Name" VerticalAlignment="Bottom" Click="searchByNameOfPatient" Height="30" Margin="36,0,0,110" HorizontalAlignment="Left" Width="120"/>
+        </GroupBox>
+        <TextBox Name ="NameOfPatient" HorizontalAlignment="Left" Height="30" Margin="74,31,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="White" RenderTransformOrigin="0.45,1.604">
+        </TextBox>
+
+        <Button Content ="Search By Test" HorizontalAlignment="Left"   Height="30" Margin="596,28,0,0" Grid.Row="2" VerticalAlignment="Top" Width="118" Click="searchByNameOfTest" FontStyle="Italic">
+        </Button>
+        <ComboBox  Grid.Row ="2" Name ="testsComboBox" HorizontalAlignment="Left" Width="120" Margin="596,71,0,0" Height="32" VerticalAlignment="Top">
+            <ComboBoxItem Name="urinaTestItem">Urina Test</ComboBoxItem>
+            <ComboBoxItem Name="generalBloodTestItem">General Blood Test</ComboBoxItem>
+            <ComboBoxItem Name="carbohydrateTestItem">Carbohydrate Metabolism Test</ComboBoxItem>
+            <ComboBoxItem Name="proteinTestItem">Protein Metabolism Test</ComboBoxItem>
+            <ComboBoxItem Name="vitaminsTestItem">Vitamins Test</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox  Grid.Row ="2" Name ="asistantsComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="342,73,0,0" Width="120" Height="30">
+            <ComboBoxItem Name="br">Nicolas Browdi</ComboBoxItem>
+            <ComboBoxItem Name="qc">Quon Carey</ComboBoxItem>
+            <ComboBoxItem Name="mp">Maggie Perry</ComboBoxItem>
+            <ComboBoxItem>Mechelle Lawrence</ComboBoxItem>
+            <ComboBoxItem>Florence Henry</ComboBoxItem>
+            <ComboBoxItem>Daquan Walters</ComboBoxItem>
+            <ComboBoxItem>Castor Hatfield</ComboBoxItem>
+            <ComboBoxItem>MacKenzie Craig</ComboBoxItem>
+            <ComboBoxItem>Blythe Chambers</ComboBoxItem>
+            <ComboBoxItem>Ebony Bird</ComboBoxItem>
+            <ComboBoxItem>Duncan Gibbs</ComboBoxItem>
+            <ComboBoxItem>Lisandra Hoover</ComboBoxItem>
+            <ComboBoxItem>Larissa Osborne</ComboBoxItem>
+            <ComboBoxItem>Duncan Gibbs</ComboBoxItem>
+            <ComboBoxItem>Nadine Galloway</ComboBoxItem>
+            <ComboBoxItem>Bryar Leach</ComboBoxItem>
+            <ComboBoxItem>Lisandra Hoover</ComboBoxItem>
+            <ComboBoxItem>Larissa Osborne</ComboBoxItem>
+            <ComboBoxItem>Fleur Bond</ComboBoxItem>
+            <ComboBoxItem>Nyssa Morales</ComboBoxItem>
+            <ComboBoxItem>Hyacinth Harrington</ComboBoxItem>
+        </ComboBox>
+        <Button Content="Search By Asistent" HorizontalAlignment="Left" Height="30" Margin="342,30,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Click="searchByNameOfAsistent" FontStyle="Italic"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="30,1,0,0" VerticalAlignment="Top" Height="30" Grid.Row="1" Width="10"/>
+        <Calendar HorizontalAlignment="Left" Margin="808,26,0,0" Grid.Row="2" VerticalAlignment="Top" Width="226"/>
+    </Grid>
+</Window>
